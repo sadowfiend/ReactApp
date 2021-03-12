@@ -1,15 +1,19 @@
 import s from "./post.module.css";
 
 
-const Post = ()=>{
-    return(
-            <div className={s.item}>
-                <img src="https://vokrug-tv.ru/pic/news/5/f/c/2/rsz300x300_5fc2879465129c11d65749ab9e3db7cc.jpg" alt=""/>
-                post 1
-                <div>
-                    <span>like</span>
-                </div>
+const Post = (props) => {
+    return (
+        <div className={s.item}>
+            <img
+                src="http://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/280x178_2"
+                alt="ava"/>
+            <div>
+                <span>{props.message}</span>
             </div>
+            <div>
+                <span>like:{props.likesCount}</span>
+            </div>
+        </div>
     )
 };
 
